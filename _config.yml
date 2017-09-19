@@ -1,70 +1,100 @@
-# Welcome to Jekyll!
+# Site settings
+title: Your Blog
+SEOTitle: 你的博客 | Your Blog
+header-img: img/home-bg.jpg
+email: huxpro@gmail.com
+description: ""
+keyword: ""
+url: "http://huangxuan.me"              # your host, for absolute URL
+baseurl: "/huxblog-boilerplate"         # for example, '/blog' if your blog hosted on 'host/blog'
 
-# Website settings
-title: Jalpc
-description: Jack's blog,use Jekyll and github pages.
-keywords: Jack,Jalpc,blog,Jekyll,github,gh-pages
-baseurl:  /Jalpc # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
-url: https://jarrekk.github.io/Jalpc  # url should be 'http://<github_username>.github.io/homepage' as before
-# url: http://127.0.0.1:4000
-img_path: /Jalpc/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
 
-# author -- index page "about me" section
-author:  # change following line to your infomation.
-  name: GitHub  # Be used at blog posts' author.
-  first_name: Hub  # Be used at index page about me section.
-  last_name: Git  # Be used at index page about me section.
-  avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
-  github_username: jarrekk  # Leave blank if you don't have now
-  linkedin_id: jarrekk # Leave blank if you don't have now
-  facebook_username: jiakunnj  # Leave blank if you don't have now
-  twitter_username: jiakun614  # Leave blank if you don't have now
-  email: me@jarrekk.com  # Leave blank if you don't have now
-  cv: http://cv.jarrekk.com  # An online CV can be printed as PDF, leave blank if you don't have now
-  # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
-  skill_icon1:
-    - name: icon-apache
-    - name: fa-linux
-  skill_icon2:
-    - name: fa-linux
-    - name: icon-apache
-  desc: Introduce myself will be here.  # Describe yourself.
 
-# comment
-disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
-  name: jalpc
+# SNS settings
+RSS: false
+weibo_username:     huxpro
+zhihu_username:     huxpro
+github_username:    huxpro
+#twitter_username:  huxpro
+facebook_username:  huxpro
 
-# analytics
-## google analytics
-ga:  # if you wanna this feature, go to https://www.google.com/analytics/ to get your configuration; if not, comment following line.
-  # id:
 
-## google optimize
-go:
-  # id:
-
-## growingIO
-gio:  # if you wanna this feature, go to https://www.growingio.com/ to get your configuration; if not, comment following line.
-  # id:
-
-## donation
-donation: on  # type 'on'/'off' to choice display donation button at post page or not
-
-## carousels
-index_carousel: on  # index page carousel switch
-blog_carousel: on  # blog page carousel switch
-
-# scss
-sass:
-  style: compressed
 
 # Build settings
-encoding: utf-8
-
-# other settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+  input: GFM                            # use Github Flavored Markdown !important
 
+
+
+# Disqus settings
+#disqus_username: _your_disqus_short_name_
+
+# Duoshuo settings
+duoshuo_username: huxblog
+# Share component is depend on Comment so we can NOT use share only.
+duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+
+
+# Analytics settings
+# Baidu Analytics
+ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+# Google Analytics
+ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+ga_domain: huangxuan.me
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "写写代码，做做设计，看看产品。世界那么大，多玩玩看看。"
+sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Friends
+friends: [
+    {
+        title: "Hux Blog",
+        href: "http://huangxuan.me"
+    },{
+        title: "Foo",
+        href: "#"
+    },{
+        title: "Bar",
+        href: "#"
+    },{
+        title: "Example Friends",
+        href: "#"
+    },{
+        title: "It helps SEO",
+        href: "#"
+    }
+]
